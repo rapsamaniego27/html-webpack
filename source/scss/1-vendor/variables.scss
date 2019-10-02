@@ -1,0 +1,44 @@
+// Colors
+
+$primary:  #073763;
+$accent:  #E4572E;
+
+// Semantics
+$success:  #9FD356;
+$danger:  #960200;
+$warning:  #EDA921;
+$info:  #0074D9;
+
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$gray:   #aaa;
+$black:  #111;
+
+$light: #fff;
+$green: green;
+$dark: #333;
+
+
+// Font Weights
+
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+//Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+$sans-serif: "Open Sans", Helvetica, Verdana, sans-serif;
+$serif: Merriweather, Georgia, "Times New Roman", serif;
+$mono: "Source Code Pro", Courier, mono;
+
+//Media queries
+
+$mq-lg: "only screen and (min-width: 1200px)";
+$mq-md: "(min-width: 768px) and (max-width: 979px)";
+$mq-sm: "only screen and (max-width: 767px)";
+$mq-xs: "only screen and (max-width: 480px)";
+
