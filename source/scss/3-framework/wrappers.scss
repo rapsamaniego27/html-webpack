@@ -1,7 +1,5 @@
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -24,8 +22,29 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
+
+
+// Loop through these classes to have max-width of 1366px
+  $classes: (container, hero);
+
+  @each $class in $classes{
+    .#{$class}{
+      max-width: 1366px;
+    }
+
+    @media (min-width:1080px) and (max-width:1280px){
+      .#{$class}{
+        max-width: 1200px;
+      }
+    }
+    
   }
+
+.container__nowrap{
+  display: flex;
+}
+
+.container__flex {
+  display: flex;
+  flex-wrap: wrap;
 }
