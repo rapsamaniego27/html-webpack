@@ -25,16 +25,25 @@
 
 
 // Loop through these classes to have max-width of 1366px
-  $classes: (container, hero);
+// And response to 900 px if it's in Laptop Mode
+  $classes: (container, hero, grid-container, grid__custom);
 
   @each $class in $classes{
     .#{$class}{
       max-width: 1366px;
+      margin:0 auto;
     }
 
-    @media (min-width:1080px) and (max-width:1280px){
+    //Laptop Media Query
+    @media (max-width:1366px){
       .#{$class}{
         max-width: 1200px;
+      }
+    }
+
+    @media (min-width:1024px) and (max-width:1280px){
+      .#{$class}{
+        max-width: 986px;
       }
     }
     
@@ -47,4 +56,8 @@
 .container__flex {
   display: flex;
   flex-wrap: wrap;
+}
+
+.row{
+  width:100%;
 }

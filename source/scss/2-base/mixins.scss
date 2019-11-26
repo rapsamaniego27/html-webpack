@@ -15,3 +15,13 @@
     color:darken(#fff, 5%);
   }
 }
+
+
+//Media query to stack Elements
+//Pass in the Media query here
+@mixin media-stack-elements($media-query){
+  @media #{$media-query}{
+    display: block;
+    width: 100%;
+  }
+}

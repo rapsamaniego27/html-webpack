@@ -38,7 +38,11 @@ $mono: "Source Code Pro", Courier, mono;
 //Media queries
 
 $mq-lg: "only screen and (min-width: 1200px)";
-$mq-md: "(min-width: 768px) and (max-width: 979px)";
+$mq-md-between: "(min-width: 768px) and (max-width: 979px)";
+$mq-md: "only screen and (max-width: 979px)";
 $mq-sm: "only screen and (max-width: 767px)";
 $mq-xs: "only screen and (max-width: 480px)";
 
+.pink{
+  background:pink;
+}
