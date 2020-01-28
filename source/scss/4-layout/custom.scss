@@ -3,13 +3,13 @@
   // max-width:60rem;
   // width:calc(100% - 10rem);
   
-  @include media-stack-elements(#{$mq-md});
+  @include media-stack-elements(#{$device-md});
 
   .grid-content{
     outline: 1px solid black;
     background:$gray;
 
-    @media #{$mq-md}{
+    @media #{$device-md}{
       max-width:100%;
     }
   }

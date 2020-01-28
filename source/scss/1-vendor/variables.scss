@@ -13,11 +13,11 @@ $info:  #0074D9;
 $white:  #fff;
 $silver: #ddd;
 $gray:   #aaa;
+$dark: #333;
 $black:  #111;
 
 $light: #fff;
 $green: green;
-$dark: #333;
 
 
 // Font Weights
@@ -36,12 +36,15 @@ $serif: Merriweather, Georgia, "Times New Roman", serif;
 $mono: "Source Code Pro", Courier, mono;
 
 //Media queries
+// Note: 
+// Max <   Min >
 
-$mq-lg: "only screen and (min-width: 1200px)";
-$mq-md-between: "(min-width: 768px) and (max-width: 979px)";
-$mq-md: "only screen and (max-width: 979px)";
-$mq-sm: "only screen and (max-width: 767px)";
-$mq-xs: "only screen and (max-width: 480px)";
+// $device-lg: "only screen and (min-width: 1366px)";
+$device-lg: "only screen and (max-width: 1366px)";
+$device-md-between: "(min-width: 768px) and (max-width: 979px)";
+$device-md: "only screen and (max-width: 1024px)";
+$device-sm: "only screen and (max-width: 767px)";
+$device-xs: "only screen and (max-width: 480px)";
 
 .pink{
   background:pink;
