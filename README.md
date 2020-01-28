@@ -16,8 +16,6 @@ npm run watch
 ### Default structure
 This boilerplate default setup uses the id `#wrapper` to wrap the `#main` which contains the content and `footer` for site additional info.
 
-
-
 <!-- Markup -->
 ```HTML
 <div id="main">
