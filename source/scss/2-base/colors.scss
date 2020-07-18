@@ -1,0 +1,13 @@
+/* Looping for classes */
+
+@each $group-name, $group in $theme-defaults {
+    @if($group-name == 'Colors'){
+      /*RGB values for colors */
+      @each $name, $value in $group{
+       .color-#{$name}{
+         color: #{$value} !important;
+       }
+     }
+    }
+
+  }

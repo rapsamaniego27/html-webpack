@@ -1,4 +1,5 @@
 $theme-defaults: (
+  /* Colors */
   'Colors' : (
     "primary": #073763,
     "accent": #E4572E,
@@ -20,8 +21,8 @@ $theme-defaults: (
     "green": #228B22
   ),
 
-  'Font-weights' :(
-    // Font Weights
+  // Font Weights
+  'Font weights' :(
     'thin': 100,
     'light': 300,
     'normal': 400,
@@ -32,34 +33,16 @@ $theme-defaults: (
   
 );
 
-@function hexToRGB($hex) {
-  @return red($hex), green($hex), blue($hex);
-}
 
-:root {
-  @each $group-name, $group in $theme-defaults {
-    /*#{$group-name} */
-    @each $name, $value in $group{
-      --#{$name}: #{$value}
-    }
-    
-    @if($group-name == 'Colors'){
-      /*RGB values for colors */
-      @each $name, $value in $group{
-      --#{$name}-rgb: #{hexToRGB($value)};
-     }
-    }
+//Font Families
+/* Open Sans import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-  }
-} 
-
-
-//Fonts
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+/* Lora Import */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 $sans-serif: "Open Sans", Helvetica, Verdana, sans-serif;
-$serif: Merriweather, Georgia, "Times New Roman", serif;
+$serif: 'Lora', Georgia, "Times New Roman", serif;
 $mono: "Source Code Pro", Courier, mono;
 
 //Media queries
@@ -76,3 +59,27 @@ $device-xs: "only screen and (max-width: 480px)";
 .pink{
   background:pink;
 }
+
+
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+/* Looping for CSS Custom properties */
+:root {
+  @each $group-name, $group in $theme-defaults {
+    /*#{$group-name} */
+    @each $name, $value in $group{
+      --#{$name}: #{$value}
+    }
+    
+    @if($group-name == 'Colors'){
+      /*RGB values for colors */
+      @each $name, $value in $group{
+      --#{$name}-rgb: #{hexToRGB($value)};
+     }
+    }
+
+  }
+} 
