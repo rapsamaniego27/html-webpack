@@ -1,17 +1,17 @@
 
 .btn-success{
-  @include btn-background($success);
+  @include btn-background(color('success'));
 }
 
 .btn-danger{
-  @include btn-background($danger);
+  @include btn-background(color('danger'));
 }
 
 .btn-info{
-  @include btn-background($info);
+  @include btn-background(color('info'));
 }
 
 .btn-warning{
-  @include btn-background($warning);
+  @include btn-background(color('warning'));
 }
 

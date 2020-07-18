@@ -1,31 +1,58 @@
-// Colors
+$theme-defaults: (
+  'Colors' : (
+    "primary": #073763,
+    "accent": #E4572E,
 
-$primary:  #073763;
-$accent:  #E4572E;
+    // Semantics
+    "success": #9FD356,
+    "danger": #960200,
+    "warning": #EDA921,
+    "info": #0074D9,
 
-// Semantics
-$success:  #9FD356;
-$danger:  #960200;
-$warning:  #EDA921;
-$info:  #0074D9;
+    // Gray Scale
+    "white": #ffffff,
+    "silver": #dddddd,
+    "gray": #aaaaaa,
+    "dark": #333333,
+    "black": #111111,
 
-// Gray Scale
-$white:  #fff;
-$silver: #ddd;
-$gray:   #aaa;
-$dark: #333;
-$black:  #111;
+    "light": #ffffff,
+    "green": #228B22
+  ),
 
-$light: #fff;
-$green: green;
+  'Font-weights' :(
+    // Font Weights
+    'thin': 100,
+    'light': 300,
+    'normal': 400,
+    'semibold': 500,
+    'bold': 700,
+    'black': 900
+  ),
+  
+);
 
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
 
-// Font Weights
+:root {
+  @each $group-name, $group in $theme-defaults {
+    /*#{$group-name} */
+    @each $name, $value in $group{
+      --#{$name}: #{$value}
+    }
+    
+    @if($group-name == 'Colors'){
+      /*RGB values for colors */
+      @each $name, $value in $group{
+      --#{$name}-rgb: #{hexToRGB($value)};
+     }
+    }
 
-$light: 300;
-$normal: 400;
-$semibold: 500;
-$bold: 700;
+  }
+} 
+
 
 //Fonts
 
