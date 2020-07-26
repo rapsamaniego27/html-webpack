@@ -90,3 +90,47 @@ Go to `styles.scss` and add this code to top part of the file.
 ```SCSS
 @import '1-vendor/bootstrap';
 ```
+
+## Base Folder
+
+### **animations.scss**
+All animation classes, transitions and keyframes should be declared here.
+### **colors.scss**
+Any color related functionalities here.
+### **functions.scss**
+Sass functions are declared here.
+### **mixins.scss**
+File for creating mixins.
+### **placeholders.scss**
+File for creating placeholders.
+### **typography.scss**
+File where you can declare sizes for default typographic tags.
+
+#### Creating Typographic elements
+You can also create typographic elements here by declaring the **class name** or **tag name** and inputting the values for **size**, **mobile-size** and **weight**. 
+
+Mobile size of the element you declared is triggered at a *840 breakpoint*.
+```SCSS
+//Sample of creating a new typographic element
+'.custom-class':(
+    size:3rem,
+    mobile-size:1.5rem,
+    weight:var(--light)
+  )
+```
+
+```SCSS
+$text-elements: (
+  'h1':(
+    size:3rem,
+    mobile-size:2rem,
+    weight:var(--bold)
+  ),
+  '.custom-class':(
+    size:3rem,
+    mobile-size:1.5rem,
+    weight:var(--light)
+  ),
+  
+);
+```
