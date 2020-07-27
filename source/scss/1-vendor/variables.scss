@@ -53,10 +53,18 @@ $device-md: "only screen and (max-width: 1024px)";
 $device-sm: "only screen and (max-width: 800px)";
 $device-xs: "only screen and (max-width: 480px)";
 
+
+$breakpoints: (default:0,
+  xs:400px,
+  sm:576px,
+  md:767px,
+  lg:979px,
+  xl:1200px);
+
+
 .pink{
   background:pink;
 }
-
 
 
 @function hexToRGB($hex) {
@@ -64,19 +72,24 @@ $device-xs: "only screen and (max-width: 480px)";
 }
 
 /* Looping for CSS Custom properties */
-:root {
-  @each $group-name, $group in $theme-defaults {
-    /*#{$group-name} */
-    @each $name, $value in $group{
-      --#{$name}: #{$value}
-    }
-    
-    @if($group-name == 'Colors'){
-      /*RGB values for colors */
+@mixin createCSSThemeProperties($theme-defaults){
+  /* Declares css properties in the root element of html */
+  :root {
+    @each $group-name, $group in $theme-defaults {
+      /*#{$group-name} */
       @each $name, $value in $group{
-      --#{$name}-rgb: #{hexToRGB($value)};
-     }
-    }
+        --#{$name}: #{$value}
+      }
+      
+      @if($group-name == 'Colors'){
+        /*RGB values for colors */
+        @each $name, $value in $group{
+        --#{$name}-rgb: #{hexToRGB($value)};
+      }
+      }
 
-  }
-} 
+    }
+  } 
+}
+
+@include createCSSThemeProperties($theme-defaults);

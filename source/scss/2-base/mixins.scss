@@ -25,3 +25,28 @@
     width: 100%;
   }
 }
+
+
+/* Generates Typographic elements and sizes */
+@mixin generateTextElements($text-elements){
+  @each $element, $properties in $text-elements{
+
+  /* The element */
+  #{$element}{
+    
+    font-size:map-get($properties, size);
+    font-weight:map-get($properties, weight);
+
+    /* Checks if it has mobile size property */
+    @if map-has-key($properties, mobile-size){
+      $mobile-size:map-get($properties, mobile-size);
+
+      @media only screen and (max-width:840px){
+        font-size: $mobile-size;
+      }
+    }
+    
+  }
+}
+
+}

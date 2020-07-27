@@ -33,18 +33,18 @@ I'm using flex to have a sticky footer at the bottom.
 Making `#wrapper` as the flex container, `#main` to have a flex 1 and `footer` to shrink.
 If you want to make some edits, you may find this in `4-layout/default-structure.scss`.
 
-## Vendor Folder
+## :package: Vendor Folder 
 
-### **reset.scss**
+### :small_blue_diamond: **reset.scss**
 Contains all the reset css codes that gets rid of the default styling of html.
 
-### **themename.scss**
+### :small_blue_diamond: **themename.scss**
 For setting the themename for your front end project, commonly used for the Wordpress engine to read the name of your theme.
 
-### **variables.scss**
+### :small_blue_diamond: **variables.scss**
 Setup variables for the theme's **colors**, **font weights** and **device breakpoints**.
 
-#### I. Adding colors
+#### I. Adding theme colors or font weights
 To add **colors** or **font weights** you just need to add key a value pair inside the Colors or Font Weights list.
 
 Example:
@@ -90,24 +90,33 @@ Go to `styles.scss` and add this code to top part of the file.
 ```SCSS
 @import '1-vendor/bootstrap';
 ```
+##### :bangbang: Warning
+Make sure to comment these files on `styles.scss` so it doesn't conflict with your own framework.
 
-## Base Folder
+```SCSS
+@import '3-framework/breakpoint.scss';
+//@import '3-framework/grid.scss';
+//@import '3-framework/spacing.scss';
+//@import '3-framework/wrappers.scss';
+```
 
-### **animations.scss**
+## :package: Base Folder
+Base folder groups Sass functions, mixins, placeholders and other base code to be declared in one file.
+### :small_blue_diamond: **animations.scss**
 All animation classes, transitions and keyframes should be declared here.
-### **colors.scss**
+### :small_blue_diamond: **colors.scss**
 Any color related functionalities here.
-### **functions.scss**
+### :small_blue_diamond: **functions.scss**
 Sass functions are declared here.
-### **mixins.scss**
+### :small_blue_diamond: **mixins.scss**
 File for creating mixins.
-### **placeholders.scss**
+### :small_blue_diamond: **placeholders.scss**
 File for creating placeholders.
-### **typography.scss**
+### :small_blue_diamond: **typography.scss**
 File where you can declare sizes for default typographic tags.
 
 #### Creating Typographic elements
-You can also create typographic elements here by declaring the **class name** or **tag name** and inputting the values for **size**, **mobile-size** and **weight**. 
+You can also create typographic elements here by declaring the **class name** or **tag name** and inputting the values for **size**, **mobile-size** and **weight** inside the `$text-elements` array.
 
 Mobile size of the element you declared is triggered at a *840 breakpoint*.
 ```SCSS
@@ -134,3 +143,40 @@ $text-elements: (
   
 );
 ```
+## :package: Framework Folder
+Your own framework for grids and spacings.
+
+### :small_blue_diamond: **grids.scss**
+Grids give you Default column count is *12*, and breakpoints are declared in the `$grid-breakpoints` array.
+You may change it in the code below
+
+```SCSS
+$columns: 12;
+$grid-breakpoints: (
+  default:0,
+  sm:576px,
+  md:767px,
+  lg:979px,  
+  xl:1200px
+);
+```
+
+You may also generate *gutter sizes* by modifying the values below. 
+
+```SCSS
+$gutters: (5, 10, 15, 20);
+```
+
+### :small_blue_diamond: **spacings.scss**
+Spacings returns a result of assorted padding and margin values. Returning a `rem` unit value
+If you ever want to change the values, you can change them here under the `$spaceamounts` variable.
+
+```SCSS
+$spaceamounts: (0.5, 1, 1.5, 2, 3); // Adjust this to include the pixel amounts you need.
+
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+```
+
+### :small_blue_diamond: **spacings-10s.scss**
+This file returns spacings also, but with increments of 10. Starting from **10** - **120**.
