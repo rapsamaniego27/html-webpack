@@ -180,3 +180,57 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 
 ### :small_blue_diamond: **spacings-10s.scss**
 This file returns spacings also, but with increments of 10. Starting from **10** - **120**.
+
+### :small_blue_diamond: **wrappers.scss**
+This file contains the `container` class as copied from **Bootstrap** and a container generator that generates a classname with `1366px` of width.
+
+To use the container generator, you just need to add
+add the class name of what you want to the `$classes` array.
+
+```SCSS
+/* ===================== */
+/* Container generator */
+/* ===================== */
+// Loop through these classes to have max-width of 1366px
+// And response to 900 px if it's in Laptop Mode
+
+  $classes: (hero, grid-container, grid__custom);
+```
+
+## :package: Layout Folder
+This folder just organizes your css files by **HTML page** or **Section layout**. 
+
+You can create your files here like this:
+
+`sidebar.scss` or `about.scss`
+
+## :package: Modules Folder
+You create re-usable components here like **Buttons**, **Accordions** or **Tabs**.
+
+## :package: Responsive Folder
+Organizes your mobile responsive coding of a *section* or *page* here. 
+
+You can also create files.
+
+``` SCSS
+@media #{$device-lg}{
+  /* Insert code Desktop size here */
+
+}
+
+@media #{$device-md} {
+ /* Insert code laptop size here */
+
+}
+
+
+@media #{$device-sm} {
+ /* Insert code tablet size here */
+
+}
+
+@media #{$device-xs} {
+ /* Insert code mobile size here */
+
+}
+```
