@@ -72,6 +72,39 @@ $theme-defaults: (
   
 );
 ```
+These generate font variables for you to use in your CSS. 
+```CSS
+:root {
+  /*Colors */
+  --primary: #073763 ;
+  --accent: #E4572E ;
+  --success: #9FD356 ;
+  --black: #111111 ;
+  --light: #ffffff ;
+  --green: #228B22 ;
+  /*Font weights */
+  --light: 300 ;
+  --normal: 400 ;
+  --bold: 700 ;
+}
+```
+
+To call them use the var css function and insert a parameter containing the variable. 
+```CSS
+var(--primary)
+var(--bold)
+```
+
+#### :computer: **Colors in the frontend**
+You may use the colors you just setup in SASS by calling its class name `hex-` followed by the color name.
+
+Example:
+```HTML
+<p class="hex-primary">I'm a primary color</p>
+<p class="hex-white">I'm a white color</p>
+<p class="hex-accent">I'm an accent color</p>
+```
+
 #### II. Hex to RGB function
 The variables folder also contains the function `hexToRGB()` to convert Hex color values to RGB.
 
@@ -80,6 +113,29 @@ The variables folder also contains the function `hexToRGB()` to convert Hex colo
   @return red($hex), green($hex), blue($hex);
 }
 ```
+
+This will generate font variables like these:
+```CSS
+:root{
+  --primary-rgb: 7, 55, 99;
+  --success-rgb: 159, 211, 86;
+  --white-rgb: 255, 255, 255;
+  --green-rgb: 34, 139, 34;
+}
+```
+
+Now everytime you want to use the color by manipulating its opacity you can just call it like this.
+
+
+```CSS
+.class{
+  background:rgba(var(--primary-rgb), 0.5);
+  background:rgba(var(--success-rgb), 0.5);
+  background:rgba(var(--green-rgb), 0.5);
+  background:rgba(var(--white-rgb), 0.5);
+}
+```
+
 
 #### III. Installing Bootstrap
 Folder contains the importing of the Bootstrap framework to your boilerplate. To activate the framework just uncomment the line of code. 
@@ -143,6 +199,18 @@ $text-elements: (
   
 );
 ```
+
+#### :computer: **Typography in the frontend**
+Sample code in displaying your custom text classes in HTML
+
+```HTML
+    <div class="head4">This is heading 4</div>
+    <div class="head3">This is heading 3</div>
+    <div class="head2">This is heading 2</div>
+    <div class="head1">This is heading 1</div>
+```
+
+
 ## :package: Framework Folder
 Your own framework for grids and spacings.
 
@@ -167,9 +235,67 @@ You may also generate *gutter sizes* by modifying the values below.
 $gutters: (5, 10, 15, 20);
 ```
 
+#### :computer: **Grids in the frontend**
+The `grid__custom` is the class you generated in the Container generator, giving it a `container__flex` class which gives makes the class to be a flex display.
+
+As you see, the grid system works like **Bootstrap** the only difference is that grid classes are named `col-md3` instead of `col-md-3`.
+
+The sample below shows 4 columns with a division of 3 fractured lengths of the *12 column grid system.*
+
+As it responds to mobile and tablet making it 2 columns then 1.
+ 
+```HTML
+<div class="grid__custom mt-1 container__flex">
+  <!-- 1st DIV -->
+ <div class="col-lg3 col-md6 col-sm3 grid__custom__content">
+    <h3>Col LG 3 </h3>
+    <div class="gut-15">
+      <p>
+        cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
+      </p>
+    </div>
+  </div>
+  <!-- 2nd DIV -->
+  <div class="col-lg3 col-md6 col-sm3 grid__custom__content">
+    <h3>Col LG 3 </h3>
+    <div class="gut-15">
+      <p>
+        cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
+      </p>
+    </div>
+  </div>
+  <!-- 3rd Duv -->
+  <div class="col-lg3 col-md6 col-sm3 grid__custom__content">
+    <h3>Col LG 3 </h3>
+    <div class="gut-15">
+      <p>
+        cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
+      </p>
+    </div>
+  </div>  
+  <!-- 4th Div -->
+  <div class="col-lg3 col-md6 col-sm3 grid__custom__content">
+    <h3>Col LG 3 </h3>
+    <div class="gut-15">
+      <p>
+        cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nobis obcaecati.
+      </p>
+    </div>
+  </div>  
+</div>
+```
+
+To input paddings around it you simply type in the word `gutter` followed by how much spacing you want.
+
+```HTML
+<div class="gut-5"></div>
+<div class="gut-10"></div>
+```
+
 ### :small_blue_diamond: **spacings.scss**
 Spacings returns a result of assorted padding and margin values. Returning a `rem` unit value
 If you ever want to change the values, you can change them here under the `$spaceamounts` variable.
+
 
 ```SCSS
 $spaceamounts: (0.5, 1, 1.5, 2, 3); // Adjust this to include the pixel amounts you need.
@@ -178,8 +304,50 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 
 ```
 
+#### :computer: **Paddings and Margins in the frontend**
+To call a padding or margin size in the front end. 
+The convention starts with the:
+
+1. type of spacing `m` or `p`
+2. position `t`, `l` `r` or `b`
+3. space amount from **1** to **5**.
+
+Example:
+```HTML
+<!-- Padding Top -->
+<div class="pt-1"></div>
+<div class="pt-2"></div>
+<div class="pt-3"></div>
+
+<!-- Margin Bottom -->
+<div class="mb-4"></div>
+<div class="mb-5"></div>
+```
+
+
 ### :small_blue_diamond: **spacings-10s.scss**
-This file returns spacings also, but with increments of 10. Starting from **10** - **120**.
+This file returns spacings also, but with increments of 10. Starting from **10** - **120**. 
+
+It also includes breakpoint by calling the screensize acronym.
+
+#### :computer: **Larger spacings in the frontend**
+To call a larger padding or margin size in the front end. 
+The convention starts with the:
+
+1. type of spacing `m` or `p`
+2. position `t`, `l`, `r` or `b`
+2. screen size `xs`, `sm`, `md` or `lg`.
+4. space amount divisible by 10 from **10** to **120**.
+
+Example:
+```HTML
+<!--A margin top of 90px that shrinks to 20px when in mobile -->
+<div class="mt-lg-90 mt-xs-20"></div>
+
+<!-- A padding left of 60px on Laptop, shrinks to 30px on tablets  -->
+<div class="pl-md-60 pl-sm-30"></div>
+
+```
 
 ### :small_blue_diamond: **wrappers.scss**
 This file contains the `container` class as copied from **Bootstrap** and a container generator that generates a classname with `1366px` of width.
@@ -196,6 +364,12 @@ add the class name of what you want to the `$classes` array.
 
   $classes: (hero, grid-container, grid__custom);
 ```
+#### :computer: **Wrappers in the frontend**
+```HTML
+<div class="hero"></div>
+
+<div class="grid-container"></div>
+```
 
 ## :package: Layout Folder
 This folder just organizes your css files by **HTML page** or **Section layout**. 
@@ -210,7 +384,7 @@ You create re-usable components here like **Buttons**, **Accordions** or **Tabs*
 ## :package: Responsive Folder
 Organizes your mobile responsive coding of a *section* or *page* here. 
 
-You can also create files.
+You can also create files here.
 
 ``` SCSS
 @media #{$device-lg}{
