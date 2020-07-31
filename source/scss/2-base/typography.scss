@@ -42,21 +42,21 @@ $text-elements: (
   ),
   '.head1':(
     size:3.8rem,
-    mobile-size:8vw, 
+    mobile-size:7vw, 
     weight:var(--bold)
   ),
   '.head2':(
-    size:4.75rem,
-    mobile-size:9vw, 
+    size:4.5rem,
+    mobile-size:8.5vw, 
     weight:var(--bold)
   ),
   '.head3':(
-    size:6rem,
-    mobile-size:10vw, 
+    size:5.25rem,
+    mobile-size:9.5vw, 
     weight:var(--bold)
   ),
   '.head4':(
-    size:7.45rem,
+    size:6rem,
     mobile-size:11vw, 
     weight:var(--bold)
   ),
