@@ -10,6 +10,8 @@ const str = 'Hello';
 const result = pattern.exec(str);
 console.log(result);
 
+
+/* Function to test if the str passes the pattern. */
 function patternTest(pattern, str){
  if(pattern.test(str)){
   console.log(`${str} matches ${pattern.source}`);

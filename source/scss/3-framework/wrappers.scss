@@ -32,7 +32,8 @@
   @each $class in $classes{
     .#{$class}{
       max-width: 1366px;
-      margin:0 auto;
+      margin-right: auto;
+      margin-left: auto;
     }
 
     //Laptop Media Query

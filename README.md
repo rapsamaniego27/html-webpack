@@ -33,6 +33,16 @@ I'm using flex to have a sticky footer at the bottom.
 Making `#wrapper` as the flex container, `#main` to have a flex 1 and `footer` to shrink.
 If you want to make some edits, you may find this in `4-layout/default-structure.scss`.
 
+# :floppy_disk: DIST Files
+The **dist** folder contains all the precompiled assets handled by webpack after running the `npm run watch` command. If you want to make changes in your directory and compilation settings. You go to `webpack.mix.js`.
+
+## :package: app.js
+Compiles all the javacsript files here. 
+## :package: style.min.css
+Compiles all the scss files here.
+
+# :lipstick: SCSS Files
+
 ## :package: Vendor Folder 
 
 ### :small_blue_diamond: **reset.scss**
@@ -336,13 +346,15 @@ The convention starts with the:
 
 1. type of spacing `m` or `p`
 2. position `t`, `l`, `r` or `b`
-2. screen size `xs`, `sm`, `md` or `lg`.
+2. breakpoint `xs`, `sm`, `md`, `lg` or nothing at all'.
 4. space amount divisible by 10 from **10** to **120**.
 
 Example:
+
 ```HTML
+
 <!--A margin top of 90px that shrinks to 20px when in mobile -->
-<div class="mt-lg-90 mt-xs-20"></div>
+<div class="mt-90 mt-xs-20"></div>
 
 <!-- A padding left of 60px on Laptop, shrinks to 30px on tablets  -->
 <div class="pl-md-60 pl-sm-30"></div>
@@ -369,6 +381,8 @@ add the class name of what you want to the `$classes` array.
 <div class="hero"></div>
 
 <div class="grid-container"></div>
+
+<div class="container"></div>
 ```
 
 ## :package: Layout Folder
@@ -408,3 +422,13 @@ You can also create files here.
 
 }
 ```
+
+# :space_invader: JS Files
+## :package: Classes Folder
+Folder to store all your Javascript Classes.
+## :package: Components Folder
+Final output of your component, files where you can run javascript code thats not inside a class.
+## :package: Misc Folder
+Optional Folder, where you can put miscellaneous codes.
+## :package: Vendors Folder
+Folder where you put 3rd party javascript code or libraries.
