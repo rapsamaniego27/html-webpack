@@ -105,6 +105,13 @@ var(--primary)
 var(--bold)
 ```
 
+If the css property for colors does not work try the color function I made.
+
+```SCSS
+color('success');
+color('dark');
+```
+
 #### :computer: **Colors in the frontend**
 You may use the colors you just setup in SASS by calling its class name `hex-` followed by the color name.
 
