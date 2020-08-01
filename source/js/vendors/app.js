@@ -1,2 +1,2 @@
 // require ('bootstrap');
-console.log('vendor.js');
+console.log('vendor file from vendors folder');

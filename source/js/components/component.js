@@ -1,1 +1,1 @@
-console.log('component');
+console.log('component file from components folder');

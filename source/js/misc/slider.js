@@ -1,1 +1,1 @@
-console.log('Slider js');
+console.log('Slider file from misc folder');

@@ -1,1 +1,1 @@
-console.log('Nav js');
+console.log('Nav file from misc folder');
