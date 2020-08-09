@@ -217,6 +217,23 @@ $text-elements: (
 );
 ```
 
+#### Creating a triangle
+In creating a triangle, you need to pass 4 arguments.
+* **size** of the triangle 
+* which **side** of the triangle you want it to point to
+* position on the **left** side
+* position on the **top** side
+* **color** of the triangle
+
+You use this like this.
+`top`, `left`, and `color` can be empty values.
+```SCSS
+.important{
+  color:#000000;
+  @include triangulate(1rem, left, $left: -4rem, $color: blue)
+}
+```
+
 #### :computer: **Typography in the frontend**
 Sample code in displaying your custom text classes in HTML
 

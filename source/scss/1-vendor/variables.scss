@@ -1,6 +1,7 @@
 $theme-defaults: (
   /* Colors */
-  'Colors' : ("primary": #073763,
+  'Colors' : (
+    "primary": #073763,
     "accent": #E4572E,
 
     // Semantics
@@ -20,12 +21,14 @@ $theme-defaults: (
     "green": #228B22),
 
   // Font Weights
-  'Font weights' :('weight-thin': 100,
+  'Font weights' :(
+    'weight-thin': 100,
     'weight-light': 300,
     'weight-normal': 400,
     'weight-semibold': 500,
     'weight-bold': 700,
-    'weight-black': 900),
+    'weight-black': 900
+  ),
 
 );
 
@@ -34,17 +37,9 @@ $theme-defaults: (
 /* Import */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-$sans-serif: "Open Sans",
-Helvetica,
-Verdana,
-sans-serif;
-$serif: 'Lora',
-Georgia,
-"Times New Roman",
-serif;
-$mono: "Source Code Pro",
-Courier,
-mono;
+$sans-serif: "Open Sans",Helvetica, Verdana, sans-serif;
+$serif: 'Lora', Georgia, "Times New Roman", serif;
+$mono: "Source Code Pro", Courier, mono;
 
 //Media queries
 // Note: 
