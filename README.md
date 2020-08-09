@@ -230,7 +230,7 @@ You use this like this.
 ```SCSS
 .important{
   color:#000000;
-  @include triangulate(1rem, left, $left: -4rem, $color: blue)
+  @include triangulate(1rem, left, $left: -4rem, $color: blue);
 }
 ```
 
