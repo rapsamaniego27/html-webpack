@@ -1,0 +1,18 @@
+[
+ {
+  "name" : "Ralph",
+  "type" : "Musician"
+ },
+ {
+  "name": "Matthew",
+  "type": "Gamer"
+ },
+ {
+  "name": "Paulo",
+  "type": "Vlogger"
+ },
+ {
+  "name": "Clara",
+  "type": "Ballerina"
+ }
+]
