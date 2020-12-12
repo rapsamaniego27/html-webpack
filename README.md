@@ -277,6 +277,8 @@ As you see, the grid system works like **Bootstrap** the only difference is that
 The sample below shows 4 columns with a division of 3 fractured lengths of the *12 column grid system.*
 
 As it responds to mobile and tablet making it 2 columns then 1.
+
+Note: Col classes with sizes like `md` or `lg` or etc., are read first before col only classes.
  
 ```HTML
 <div class="grid__custom mt-1 container__flex">
