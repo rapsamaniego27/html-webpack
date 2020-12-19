@@ -402,6 +402,30 @@ add the class name of what you want to the `$classes` array.
 
   $classes: (hero, grid-container, grid__custom);
 ```
+### :small_blue_diamond: **layout.scss**
+This file contains pre-made display elements.
+
+```CSS
+/* Basic layout */
+.layout-block{
+ display:block;
+}
+
+/* Layout with centering position */
+.layout-block__center{
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+ display: block;
+}
+```
+
+Example:
+
+```HTML
+<div class="layout-block"> Element here ... </div>
+```
+
 #### :computer: **Wrappers in the frontend**
 ```HTML
 <div class="hero"></div>
