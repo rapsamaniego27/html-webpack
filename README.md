@@ -181,6 +181,14 @@ All animation classes, transitions and keyframes should be declared here.
 Any color related functionalities here.
 ### :small_blue_diamond: **functions.scss**
 Sass functions are declared here.
+#### :computer: **Rem function in the CSS**
+
+```SCSS
+  h1{
+    font-size: rem(24); //1.5rem (24px)
+  }
+```
+
 ### :small_blue_diamond: **mixins.scss**
 File for creating mixins.
 ### :small_blue_diamond: **placeholders.scss**

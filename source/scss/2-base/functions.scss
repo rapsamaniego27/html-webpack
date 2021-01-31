@@ -19,3 +19,8 @@
   }
 }
 
+
+/* Automatically converts the pixel unit to rem */
+@function rem($pixels, $context: 16){
+  @return ($pixels / $context) * 1rem;
+}
