@@ -415,6 +415,16 @@ add the class name of what you want to the `$classes` array.
 ### :small_blue_diamond: **layout.scss**
 This file contains pre-made display elements.
 
+The available layouts: 
+
+* `.layout-block`
+* `.layout-inline`
+* `.layout-inline-block`
+* `.layout-flex`
+* `.layout-grid`
+* `.layout-table`
+* `.layout-none`
+
 ```CSS
 /* Basic layout */
 .layout-block{
@@ -422,6 +432,7 @@ This file contains pre-made display elements.
 }
 
 /* Layout with centering position */
+/* This is also available for flex and absolute */
 .layout-block__center{
  margin-left: auto;
  margin-right: auto;
@@ -430,11 +441,44 @@ This file contains pre-made display elements.
 }
 ```
 
-Example:
+#### :computer: **Layouts in the frontend**
 
 ```HTML
 <div class="layout-block"> Element here ... </div>
 ```
+
+You can also use it in responsive mode for example:
+
+```HTML
+<div class="layout-sm-block"> Element here ... </div>
+<div class="layout-md-block"> Element here ... </div>
+<div class="layout-lg-block"> Element here ... </div>
+<div class="layout-xl-block"> Element here ... </div>
+```
+
+Now let's talk about flexes, you can use vertical or horizontal alignment and set it like this.
+
+**Horizontal**:
+* `.flex-h__start`
+* `.flex-h__end`
+* `.flex-h__center`
+* `.flex-h__space-around`
+* `.flex-h__space-between`
+* `.flex-h__space-evenly`
+
+**Vertical**:
+* `.flex-v__start`
+* `.flex-v__end`
+* `.flex-v__center`
+* `.flex-v__baseline`
+* `.flex-v__stretch`
+
+To make it display depending on the device width simply add the breakpoints **md**, **sm**, **lg** or **xl** in the middle of the class like this.
+
+* `.flex-h-sm__space-around`
+* `.flex-h-md__space-around`
+* `.flex-h-lg__space-around`
+* `.flex-h-xl__space-around`
 
 #### :computer: **Wrappers in the frontend**
 ```HTML
