@@ -9,16 +9,30 @@
     @each $side in $sides {
 
      // Margins
-     @for $i from 1 through 12 {
+     /* If statement checks if increment is 0 */
+     @for $i from 0 through 12 {
       .m#{str-slice($side, 0, 1)}-#{$name}-#{$i+'0'} {
-       margin-#{$side}: #{$i + '0'}px !important;
+        
+        @if $i != 0{
+          margin-#{$side}: #{$i + '0'}px !important;
+        } @else {
+           margin-#{$side}: 0 !important;
+        }
+
       }
      }
 
      // Paddings
-     @for $i from 1 through 12 {
+     /* If statement checks if increment is 0 */
+     @for $i from 0 through 12 {
       .p#{str-slice($side, 0, 1)}-#{$name}-#{$i+'0'} {
-       padding-#{$side}: #{$i + '0'}px !important;
+  
+       @if $i != 0{
+          padding-#{$side}: #{$i + '0'}px !important;
+        } @else {
+           padding-#{$side}: 0 !important;
+        }
+
       }
      }
 
@@ -33,16 +47,31 @@
 
  @each $side in $sides{
        // Margins
-    @for $i from 1 through 12 {
+       @for $i from 0 through 12 {
+      /* If statement checks if increment is 0 else display only 1 digit*/
       .m#{str-slice($side, 0, 1)}-#{$i+'0'} {
-        margin-#{$side}: #{$i + '0'}px;
+       
+        @if $i != 0{
+          margin-#{$side}: #{$i + '0'}px !important;
+        } @else {
+           margin-#{$side}: 0 !important;
+        }
+
       }
     }
 
     // Paddings
-    @for $i from 1 through 12 {
+    @for $i from 0 through 12 {
+      /* If statement checks if increment is 0 else display only 1 digit*/
       .p#{str-slice($side, 0, 1)}-#{$i+'0'} {
-        padding-#{$side}: #{$i + '0'}px;
+
+        
+        @if $i != 0{
+          padding-#{$side}: #{$i + '0'}px !important;
+        } @else {
+           padding-#{$side}: 0 !important;
+        }
+
       }
     }
   }

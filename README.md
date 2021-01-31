@@ -385,6 +385,8 @@ Example:
 <!-- A padding left of 60px on Laptop, shrinks to 30px on tablets  -->
 <div class="pl-md-60 pl-sm-30"></div>
 
+<!-- You can even use zero margins as long as you put two zero digits-->
+<div class="mt-md-00"></div>
 ```
 
 ### :small_blue_diamond: **wrappers.scss**
