@@ -7,6 +7,10 @@
       .hex-#{$name}{
         color: #{$value} !important;
       }
+
+      .bg-#{$name}{
+        background: #{$value} !important;
+      }
     }
   }
 }

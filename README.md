@@ -113,13 +113,19 @@ color('dark');
 ```
 
 #### :computer: **Colors in the frontend**
-You may use the colors you just setup in SASS by calling its class name `hex-` followed by the color name.
+You may use the colors you just setup in SASS by calling its class name `hex-` or `bg-` followed by the color name.
 
 Example:
 ```HTML
+<!-- For Color -->
 <p class="hex-primary">I'm a primary color</p>
 <p class="hex-white">I'm a white color</p>
 <p class="hex-accent">I'm an accent color</p>
+
+<!-- For Backgrounds -->
+<p class="bg-primary">I'm a primary background</p>
+<p class="bg-white">I'm a white background</p>
+<p class="bg-accent">I'm an accent background</p>
 ```
 
 #### II. Hex to RGB function
