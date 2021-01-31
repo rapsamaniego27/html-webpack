@@ -445,6 +445,42 @@ You can create your files here like this:
 ## :package: Modules Folder
 You create re-usable components here like **Buttons**, **Accordions** or **Tabs**.
 
+### :small_blue_diamond: **modal.scss**
+This is a ready made basic modal for use.
+
+* `.modal` is the parent container of the modal. 
+* `.modal-close` is the close button.
+* `.modal-guts` is the inner layer of the modal.
+* `.modal-overlay` is located outside and just beside the modal, making sure its z-index is lower so that modal would stay upfront.
+* `.modal--hide` is the modifier to have modal be hidden from the front end.
+#### :computer: **Modal in the frontend**
+
+```HTML
+ <!-- Modal -->
+      <div class="modal" id="modal">
+        <a href="#" target="_blank" class="modal-close" id="modalClose">
+          <i class="fas fa-times fa-2x"></i>
+        </a>
+        <!-- Modal Guts -->
+        <div class="modal-guts">
+          <div class="modal-content">
+            <h3 id="bandName">Rap's Biography</h3>
+            <p id="bandBio">
+              Rap started to play the guitar at age 12. He started listening to New wave, Alternative and Punk music, which lead him to form his 1st band in High School. As he stepped into College, he joined a Pop/OPM band called 29th OF FEBRUARY where they won 3rd place in the 2015 SESSIONISTAS (Tiendesitas) and became Champion in the 2016 BAND CLASH (Trinity
+              University).
+              <br><br>
+              Inspired by his musician uncles in Hong Kong, he dedicated his life into forming this Acoustic band, hoping to show the audiences the greatness of Folk, Country and Rock N Roll music. Aside from the Guitar, he also enjoys playing the Violin, DOTA and watch Comedic movies in his past time. He currently works for StraightArrow Corporation as a
+              Web Specialist.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modal Overlay -->
+      <div class="modal-overlay" id="modalOverlay">
+      </div>
+```
+
 ## :package: Responsive Folder
 Organizes your mobile responsive coding of a *section* or *page* here. 
 
